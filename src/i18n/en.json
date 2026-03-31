@@ -1,0 +1,89 @@
+{
+  "app": {
+    "title": "CYBERSHOW",
+    "subtitle": "INTERACTIVE 2026"
+  },
+  "login": {
+    "namePlaceholder": "Your name",
+    "nameLabel": "Name",
+    "chooseTeam": "Choose your team",
+    "join": "JOIN",
+    "nameTooLong": "Max 15 characters",
+    "nameRequired": "Enter a name",
+    "teamFull": "Team full",
+    "teamLocked": "Team locked"
+  },
+  "lobby": {
+    "waiting": "Waiting for the game to start...",
+    "players": "players",
+    "getReady": "Get ready!"
+  },
+  "vote": {
+    "title": "VOTE THE SOUND",
+    "subtitle": "Choose your team's sound",
+    "timeLeft": "Time left",
+    "votes": "votes",
+    "result": "Your team's sound is",
+    "voted": "You voted!"
+  },
+  "waiting": {
+    "title": "WAITING",
+    "score": "Score",
+    "points": "points",
+    "nextQuestion": "Next question coming..."
+  },
+  "countdown": {
+    "ready": "READY?"
+  },
+  "buzzer": {
+    "buzz": "BUZZ!",
+    "press": "PRESS!"
+  },
+  "green": {
+    "yourTurn": "YOUR TURN!",
+    "typeAnswer": "Type your answer...",
+    "submit": "SUBMIT",
+    "timeLeft": "Time left",
+    "teamAnswering": "Your team is answering!",
+    "helpTeam": "Help your teammates!"
+  },
+  "red": {
+    "locked": "LOCKED",
+    "teamAnswering": "Team {team} is answering..."
+  },
+  "correct": {
+    "title": "CORRECT!",
+    "wellDone": "Well done!",
+    "points": "+{points} points"
+  },
+  "error": {
+    "title": "WRONG!",
+    "wrong": "Incorrect answer",
+    "tryAgain": "Buzzers reopened..."
+  },
+  "reveal": {
+    "title": "THE ANSWER WAS..."
+  },
+  "chat": {
+    "placeholder": "Suggest... (max 40 chars)",
+    "send": "Send"
+  },
+  "paused": {
+    "title": "GAME PAUSED",
+    "message": "We'll be back shortly..."
+  },
+  "finale": {
+    "lobby": "FINALE INCOMING...",
+    "wait": "Get ready for the results!",
+    "winner": "VICTORY!",
+    "winnerMsg": "Your team won!",
+    "loser": "DEFEAT",
+    "loserMsg": "Not this time...",
+    "end": "THANK YOU!",
+    "endMsg": "Thanks for playing!",
+    "seeYou": "See you next time!"
+  },
+  "language": {
+    "switchTo": "IT"
+  }
+}

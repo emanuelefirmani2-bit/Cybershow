@@ -1,0 +1,89 @@
+{
+  "app": {
+    "title": "CYBERSHOW",
+    "subtitle": "INTERACTIVE 2026"
+  },
+  "login": {
+    "namePlaceholder": "Il tuo nome",
+    "nameLabel": "Nome",
+    "chooseTeam": "Scegli la tua squadra",
+    "join": "ENTRA",
+    "nameTooLong": "Max 15 caratteri",
+    "nameRequired": "Inserisci un nome",
+    "teamFull": "Squadra piena",
+    "teamLocked": "Squadra bloccata"
+  },
+  "lobby": {
+    "waiting": "In attesa dell'inizio...",
+    "players": "giocatori",
+    "getReady": "Preparati!"
+  },
+  "vote": {
+    "title": "VOTA IL SUONO",
+    "subtitle": "Scegli il suono della tua squadra",
+    "timeLeft": "Tempo rimasto",
+    "votes": "voti",
+    "result": "Il suono della vostra squadra \u00e8",
+    "voted": "Hai votato!"
+  },
+  "waiting": {
+    "title": "IN ATTESA",
+    "score": "Punteggio",
+    "points": "punti",
+    "nextQuestion": "Prossima domanda in arrivo..."
+  },
+  "countdown": {
+    "ready": "PRONTI?"
+  },
+  "buzzer": {
+    "buzz": "BUZZ!",
+    "press": "PREMI!"
+  },
+  "green": {
+    "yourTurn": "TOCCA A TE!",
+    "typeAnswer": "Scrivi la risposta...",
+    "submit": "INVIA",
+    "timeLeft": "Tempo rimasto",
+    "teamAnswering": "La tua squadra risponde!",
+    "helpTeam": "Suggerisci ai compagni!"
+  },
+  "red": {
+    "locked": "BLOCCATO",
+    "teamAnswering": "Squadra {team} sta rispondendo..."
+  },
+  "correct": {
+    "title": "CORRETTO!",
+    "wellDone": "Ottimo lavoro!",
+    "points": "+{points} punti"
+  },
+  "error": {
+    "title": "SBAGLIATO!",
+    "wrong": "Risposta errata",
+    "tryAgain": "Buzzer riaperti..."
+  },
+  "reveal": {
+    "title": "LA RISPOSTA ERA..."
+  },
+  "chat": {
+    "placeholder": "Suggerisci... (max 40 car.)",
+    "send": "Invia"
+  },
+  "paused": {
+    "title": "GIOCO IN PAUSA",
+    "message": "Riprenderemo tra poco..."
+  },
+  "finale": {
+    "lobby": "FINALE IN ARRIVO...",
+    "wait": "Preparati per i risultati!",
+    "winner": "VITTORIA!",
+    "winnerMsg": "La vostra squadra ha vinto!",
+    "loser": "PERDITA",
+    "loserMsg": "Non questa volta...",
+    "end": "GRAZIE!",
+    "endMsg": "Grazie per aver partecipato!",
+    "seeYou": "Alla prossima!"
+  },
+  "language": {
+    "switchTo": "EN"
+  }
+}

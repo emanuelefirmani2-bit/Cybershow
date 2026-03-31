@@ -1,0 +1,27 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cd:*)",
+      "Bash(npx drizzle-kit:*)",
+      "Bash(npm rebuild)",
+      "Bash(npx tsx:*)",
+      "Bash(npx tsc:*)",
+      "Bash(rm:*)",
+      "Bash(ipconfig)",
+      "Bash(npm run:*)",
+      "Bash(netstat -ano)",
+      "Bash(taskkill //PID 41668 //F)",
+      "Bash(taskkill //PID 4016 //F)",
+      "Bash(taskkill //PID 46992 //F)",
+      "Bash(find /c/Users/emanu/Desktop/showinterattivo -name .env* -o -name *.env*)",
+      "Bash(node:*)",
+      "Bash(tasklist)",
+      "Bash(npx vite:*)",
+      "Bash(ls -la C:/Users/emanu/Desktop/showinterattivo/*.db)",
+      "Bash(ls -la C:/Users/emanu/Desktop/showinterattivo/*.sqlite)",
+      "Bash(npm install:*)",
+      "Bash(npm list:*)",
+      "Bash(curl:*)"
+    ]
+  }
+}

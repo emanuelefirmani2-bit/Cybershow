@@ -1,0 +1,45 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Build output
+dist/
+build/
+
+# Database
+*.db
+*.db-shm
+*.db-wal
+drizzle/
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# Media files (managed separately)
+media/q*/
+media/sounds/
+media/system/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# TypeScript
+*.tsbuildinfo
+
+# Vite
+.vite/

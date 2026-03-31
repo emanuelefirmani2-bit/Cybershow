@@ -1,0 +1,435 @@
+/* =============================================================================
+   CYBERSHOW 2026 — Cyberpunk Theme
+   Palette: #00AEEF (blue), #ED008C (pink), #B2EBF2 (tiffany),
+            #2E8B57 (green), #B22222 (red), #1A1A2E (bg)
+============================================================================= */
+
+/* ---------------------------------------------------------------------------
+   CSS Custom Properties
+--------------------------------------------------------------------------- */
+
+:root {
+  --cyber-blue: #00AEEF;
+  --cyber-pink: #ED008C;
+  --cyber-tiffany: #B2EBF2;
+  --cyber-green: #2E8B57;
+  --cyber-red: #B22222;
+  --cyber-bg: #1A1A2E;
+  --cyber-dark: #0D0D1A;
+  --cyber-panel: #16213E;
+  --cyber-yellow: #FFD700;
+  --glow-blue: 0 0 20px #00AEEF, 0 0 40px rgba(0, 174, 239, 0.4);
+  --glow-pink: 0 0 20px #ED008C, 0 0 40px rgba(237, 0, 140, 0.4);
+  --glow-green: 0 0 20px #2E8B57, 0 0 40px rgba(46, 139, 87, 0.4);
+  --glow-red: 0 0 20px #B22222, 0 0 40px rgba(178, 34, 34, 0.4);
+  --glow-ice: 0 0 15px #B2EBF2, 0 0 30px rgba(178, 235, 242, 0.5);
+  --border-radius: 1rem;
+}
+
+/* ---------------------------------------------------------------------------
+   State utility classes
+--------------------------------------------------------------------------- */
+
+.green-glow {
+  background: linear-gradient(135deg, #1a3a2a 0%, #0d2010 100%);
+  box-shadow: var(--glow-green);
+  border: 2px solid var(--cyber-green);
+  animation: greenPulse 2s ease-in-out infinite;
+}
+
+.red-lock {
+  background: linear-gradient(135deg, #3a1a1a 0%, #200d0d 100%);
+  box-shadow: var(--glow-red);
+  border: 2px solid var(--cyber-red);
+}
+
+.ice-border {
+  border: 3px solid var(--cyber-tiffany) !important;
+  box-shadow: var(--glow-ice) !important;
+  animation: iceGlow 1.5s ease-in-out infinite alternate !important;
+}
+
+.neon-blue {
+  color: var(--cyber-blue);
+  text-shadow: 0 0 10px var(--cyber-blue), 0 0 20px var(--cyber-blue);
+}
+
+.neon-pink {
+  color: var(--cyber-pink);
+  text-shadow: 0 0 10px var(--cyber-pink), 0 0 20px var(--cyber-pink);
+}
+
+.neon-green {
+  color: var(--cyber-green);
+  text-shadow: 0 0 10px var(--cyber-green), 0 0 20px var(--cyber-green);
+}
+
+/* ---------------------------------------------------------------------------
+   Panels & containers
+--------------------------------------------------------------------------- */
+
+.cyber-panel {
+  background: var(--cyber-panel);
+  border: 1px solid rgba(0, 174, 239, 0.3);
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  position: relative;
+  overflow: hidden;
+}
+
+.cyber-panel::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--cyber-blue), transparent);
+  opacity: 0.6;
+}
+
+/* ---------------------------------------------------------------------------
+   Buttons
+--------------------------------------------------------------------------- */
+
+.cyber-btn {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-radius: 0.75rem;
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  position: relative;
+  overflow: hidden;
+  border: none;
+}
+
+.cyber-btn::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(255,255,255,0.1), transparent);
+  opacity: 0;
+  transition: opacity 0.15s;
+}
+
+.cyber-btn:hover::after {
+  opacity: 1;
+}
+
+.cyber-btn:active {
+  transform: scale(0.97);
+}
+
+.cyber-btn-primary {
+  background: linear-gradient(135deg, var(--cyber-blue) 0%, #0080b0 100%);
+  color: white;
+  box-shadow: var(--glow-blue);
+}
+
+.cyber-btn-danger {
+  background: linear-gradient(135deg, var(--cyber-red) 0%, #8b0000 100%);
+  color: white;
+  box-shadow: var(--glow-red);
+}
+
+.cyber-btn-success {
+  background: linear-gradient(135deg, var(--cyber-green) 0%, #1a5c30 100%);
+  color: white;
+  box-shadow: var(--glow-green);
+}
+
+.cyber-btn-accent {
+  background: linear-gradient(135deg, var(--cyber-pink) 0%, #a00060 100%);
+  color: white;
+  box-shadow: var(--glow-pink);
+}
+
+.cyber-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  box-shadow: none;
+  animation: none;
+}
+
+/* ---------------------------------------------------------------------------
+   Buzzer button
+--------------------------------------------------------------------------- */
+
+.buzzer-btn {
+  width: min(280px, 75vw);
+  height: min(280px, 75vw);
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #00ccff 0%, #00AEEF 40%, #006090 100%);
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  box-shadow: var(--glow-blue), 0 0 60px rgba(0, 174, 239, 0.5), inset 0 -4px 20px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Bangers', sans-serif;
+  font-size: clamp(2rem, 10vw, 4rem);
+  letter-spacing: 0.2em;
+  color: white;
+  text-shadow: 0 0 20px rgba(255,255,255,0.8);
+  animation: buzzerPulse 1.5s ease-in-out infinite;
+  transition: transform 0.1s;
+  position: relative;
+  overflow: hidden;
+}
+
+.buzzer-btn::before {
+  content: '';
+  position: absolute;
+  top: 10%;
+  left: 15%;
+  width: 30%;
+  height: 20%;
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 50%;
+  filter: blur(8px);
+}
+
+.buzzer-btn:active {
+  transform: scale(0.93);
+}
+
+.buzzer-btn.disabled {
+  background: radial-gradient(circle at 35% 35%, #555 0%, #333 100%);
+  box-shadow: none;
+  animation: none;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* ---------------------------------------------------------------------------
+   Scanlines overlay
+--------------------------------------------------------------------------- */
+
+.scanlines {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 100;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0, 0, 0, 0.05) 2px,
+    rgba(0, 0, 0, 0.05) 4px
+  );
+}
+
+/* ---------------------------------------------------------------------------
+   Ice border effect (freeze state)
+--------------------------------------------------------------------------- */
+
+.ice-overlay {
+  position: absolute;
+  inset: 0;
+  border: 6px solid var(--cyber-tiffany);
+  box-shadow: inset 0 0 40px rgba(178, 235, 242, 0.3), var(--glow-ice);
+  pointer-events: none;
+  z-index: 10;
+  border-radius: inherit;
+  animation: iceGlow 1s ease-in-out infinite alternate;
+}
+
+/* ---------------------------------------------------------------------------
+   Particles background
+--------------------------------------------------------------------------- */
+
+.particles-bg {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.particle {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: var(--cyber-blue);
+  border-radius: 50%;
+  animation: particleFloat linear infinite;
+  opacity: 0.6;
+}
+
+/* ---------------------------------------------------------------------------
+   Circuit grid background
+--------------------------------------------------------------------------- */
+
+.circuit-bg {
+  background-image:
+    linear-gradient(rgba(0, 174, 239, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 174, 239, 0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* ---------------------------------------------------------------------------
+   Progress bar
+--------------------------------------------------------------------------- */
+
+.progress-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 999px;
+  overflow: hidden;
+  height: 8px;
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--cyber-blue), var(--cyber-pink));
+  box-shadow: 0 0 10px var(--cyber-blue);
+  transition: width 0.1s linear;
+}
+
+.progress-fill.danger {
+  background: linear-gradient(90deg, var(--cyber-red), #ff4444);
+  box-shadow: 0 0 10px var(--cyber-red);
+}
+
+/* ---------------------------------------------------------------------------
+   Glitch text effect
+--------------------------------------------------------------------------- */
+
+.glitch-text {
+  position: relative;
+}
+
+.glitch-text::before,
+.glitch-text::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.glitch-text::before {
+  color: var(--cyber-blue);
+  clip-path: polygon(0 0, 100% 0, 100% 35%, 0 35%);
+  transform: translate(-3px);
+  animation: glitchTop 3s infinite linear alternate-reverse;
+}
+
+.glitch-text::after {
+  color: var(--cyber-pink);
+  clip-path: polygon(0 65%, 100% 65%, 100% 100%, 0 100%);
+  transform: translate(3px);
+  animation: glitchBottom 2.5s infinite linear alternate-reverse;
+}
+
+/* ---------------------------------------------------------------------------
+   Keyframes
+--------------------------------------------------------------------------- */
+
+@keyframes greenPulse {
+  0%, 100% { box-shadow: 0 0 15px var(--cyber-green), 0 0 30px rgba(46, 139, 87, 0.3); }
+  50% { box-shadow: 0 0 30px var(--cyber-green), 0 0 60px rgba(46, 139, 87, 0.6); }
+}
+
+@keyframes iceGlow {
+  from { box-shadow: inset 0 0 20px rgba(178, 235, 242, 0.2), 0 0 10px var(--cyber-tiffany); }
+  to { box-shadow: inset 0 0 50px rgba(178, 235, 242, 0.4), 0 0 25px var(--cyber-tiffany); }
+}
+
+@keyframes buzzerPulse {
+  0%, 100% { box-shadow: var(--glow-blue), 0 0 40px rgba(0, 174, 239, 0.4); }
+  50% { box-shadow: 0 0 40px var(--cyber-blue), 0 0 80px rgba(0, 174, 239, 0.7); }
+}
+
+@keyframes particleFloat {
+  0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+  10% { opacity: 0.6; }
+  90% { opacity: 0.6; }
+  100% { transform: translateY(-20vh) rotate(360deg); opacity: 0; }
+}
+
+@keyframes glitchTop {
+  2% { transform: translate(-3px, 0); }
+  4% { transform: translate(3px, 0); }
+  6% { transform: translate(0, 0); }
+}
+
+@keyframes glitchBottom {
+  2% { transform: translate(3px, 0); }
+  4% { transform: translate(-3px, 0); }
+  6% { transform: translate(0, 0); }
+}
+
+@keyframes countdownPop {
+  0% { transform: scale(2); opacity: 0; }
+  30% { transform: scale(1); opacity: 1; }
+  70% { transform: scale(1); opacity: 1; }
+  100% { transform: scale(0.8); opacity: 0; }
+}
+
+@keyframes victoryShine {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+@keyframes lockShake {
+  0%, 100% { transform: translateX(0) rotate(0deg); }
+  15% { transform: translateX(-4px) rotate(-5deg); }
+  30% { transform: translateX(4px) rotate(5deg); }
+  45% { transform: translateX(-4px) rotate(-3deg); }
+  60% { transform: translateX(4px) rotate(3deg); }
+  75% { transform: translateX(-2px) rotate(-1deg); }
+  90% { transform: translateX(2px) rotate(1deg); }
+}
+
+/* ---------------------------------------------------------------------------
+   State-specific backgrounds
+--------------------------------------------------------------------------- */
+
+.state-green-bg {
+  background: radial-gradient(ellipse at center, rgba(46, 139, 87, 0.3) 0%, #0d2010 100%);
+}
+
+.state-red-bg {
+  background: radial-gradient(ellipse at center, rgba(178, 34, 34, 0.3) 0%, #1a0505 100%);
+}
+
+.state-waiting-bg {
+  background: var(--cyber-bg);
+}
+
+/* ---------------------------------------------------------------------------
+   Countdown display
+--------------------------------------------------------------------------- */
+
+.countdown-number {
+  font-family: 'Bangers', sans-serif;
+  font-size: clamp(6rem, 30vw, 12rem);
+  color: white;
+  text-shadow: 0 0 40px var(--cyber-blue), 0 0 80px rgba(0, 174, 239, 0.5);
+  animation: countdownPop 1s ease-in-out forwards;
+  display: block;
+}
+
+/* ---------------------------------------------------------------------------
+   Gold rain (winner state)
+--------------------------------------------------------------------------- */
+
+.gold-particle {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: var(--cyber-yellow);
+  border-radius: 50%;
+  animation: goldRain linear infinite;
+  box-shadow: 0 0 6px var(--cyber-yellow);
+}
+
+@keyframes goldRain {
+  0% { transform: translateY(-10vh) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(110vh) rotate(720deg); opacity: 0; }
+}
